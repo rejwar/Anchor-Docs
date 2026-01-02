@@ -422,3 +422,8 @@
 //         }
 //     }
 // }
+
+// pub fn addEvent(ctx: Context<....> , params: EventParams) -> Result <()> {
+//     let event: Event = params.into();
+//     Ok(())
+// }
