@@ -445,3 +445,6 @@
 //     pub items: [u64; 100],
 //     pub name: [u8; 32],
 // }
+
+// load_init() -> the note is opeded for the first time
+let account = &mut ctx.accounts.data_account.load_init()?;
