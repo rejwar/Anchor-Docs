@@ -454,3 +454,5 @@
 // }
 
 // pub supply: u64,
+
+// pub mint: Account<'info , Mint>
