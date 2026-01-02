@@ -485,3 +485,6 @@
 // pub struct MyContext<'info> {
 //     // here is the constraints
 // }
+
+// #[account(signer)]
+// pub authority: Accountinfo<'info>
