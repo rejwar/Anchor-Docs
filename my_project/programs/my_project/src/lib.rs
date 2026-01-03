@@ -502,3 +502,10 @@
 // pub my_account: Account<'info ,State>,
 // #[account(mut)]
 // pub my_account: Account<'info , State>,
+
+// #[account (
+//     seeds = [b"user" , authority.key().as_ref()],
+//     bump
+// )]
+
+// pub user_pda: Account<'info , user>,
