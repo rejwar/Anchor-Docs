@@ -497,3 +497,8 @@
 
 // #[account(mut)]
 // pub my_account: Account<'info , state>,
+
+// #[account(mut)]
+// pub my_account: Account<'info ,State>,
+// #[account(mut)]
+// pub my_account: Account<'info , State>,
