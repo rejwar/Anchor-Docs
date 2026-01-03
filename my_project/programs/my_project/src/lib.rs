@@ -491,3 +491,9 @@
 
 // #[account(mut)]
 // pub my_account: Account<'info , Data>
+
+// #[account(has_one = authority)]
+// pub state: Account<'info , state>,
+
+// #[account(mut)]
+// pub my_account: Account<'info , state>,
