@@ -488,3 +488,6 @@
 
 // #[account(signer)]
 // pub authority: Accountinfo<'info>
+
+// #[account(mut)]
+// pub my_account: Account<'info , Data>
