@@ -208,30 +208,35 @@
 //     value: 10,
 // })
 
-use anchor_lang::prelude::*;
-declare_id!("11111111111111111111111111111111111111");
+// use anchor_lang::prelude::*;
+// declare_id!("11111111111111111111111111111111111111");
 
-#[program]
+// #[program]
 
-pub mod emit_demo {
-    use super::*;
+// pub mod emit_demo {
+//     use super::*;
 
-    pub fn update(ctx.Context<Updata> , value: u64) -> Result<()> {
-        emit!(ValueChanged {
-            user: ctx.accounts.user.key(),
-            value,
-        });
-        Ok(())
-    }
-}
+//     pub fn update(ctx.Context<Updata> , value: u64) -> Result<()> {
+//         emit!(ValueChanged {
+//             user: ctx.accounts.user.key(),
+//             value,
+//         });
+//         Ok(())
+//     }
+// }
 
-#[derive(Accounts)]
-pub struct Updata<'info>{
-    pub user: Signer<'info>,
-}
+// #[derive(Accounts)]
+// pub struct Updata<'info>{
+//     pub user: Signer<'info>,
+// }
 
-#[event]
-pub struct ValueChanged {
-    pub user: Pubkey,
-    pub value: u64,
+// #[event]
+// pub struct ValueChanged {
+//     pub user: Pubkey,
+//     pub value: u64,
+// }
+
+#[account]
+pub struct Bigdata {
+    pub value: [u64; 100],
 }
