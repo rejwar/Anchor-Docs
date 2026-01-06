@@ -68,3 +68,14 @@
 // )]
 
 // pub profile: Account<'info , Profile>,
+
+// #[account(
+//     init_if_needed,
+//     payer = <target_account>
+// )]
+
+// [#account
+// init_if_needed,
+// payer = <target_account>,
+// space = <num_byte>
+// ])
