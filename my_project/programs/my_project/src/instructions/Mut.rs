@@ -58,3 +58,13 @@
 // )]
 
 // pub profile: Account<'info , Profile>,
+
+// #[account(
+//     init,
+//     seeds = [b"profile" , authority.key().as_ref()],
+//     bump,
+//     payer = authority,
+//     space = 8+ 64
+// )]
+
+// pub profile: Account<'info , Profile>,
