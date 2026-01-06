@@ -79,3 +79,8 @@
 // payer = <target_account>,
 // space = <num_byte>
 // ])
+
+// seeds = [
+//     b"user"
+//     authority.key().as_ref()
+// ]
