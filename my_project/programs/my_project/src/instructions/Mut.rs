@@ -36,3 +36,17 @@
 //     pub payer: Signer<'info>,
 //     pub authority: Signer<'info>,
 // }
+
+// pub struct Example<'info> {
+//     pub payer: Signer<'info>,
+//     pub authority: Signer<'info>,
+// }
+
+// payer == authority
+// #[derive(Accounts)]
+
+// pub struct Example<'info> {
+//     #[account(dup)]
+//     pub payer: Signer<'info>,
+//     pub authority: Signer<'info>,
+// }
