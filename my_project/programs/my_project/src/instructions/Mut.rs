@@ -84,10 +84,14 @@
 //     b"user"
 //     authority.key().as_ref()
 // ]
-
 // seeds = [
 //     b"user",
 //     authority.key().as_ref()
 // ]
-
 // Pubkey::create_program_address(seeds + bump)
+
+// #[account]
+// pub struct Vault {
+//     pub target: Pubkey,
+//     pub balance: u64,
+// }
