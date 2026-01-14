@@ -10,4 +10,4 @@ it(" SOL transfer anchor " , async () = {
         `\nTransaction Signature ` + 
         `https: //solana.fm/tx/${tramsactionSignature}? cluster = devnet-solana `
     )
-})
+})2

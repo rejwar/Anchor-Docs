@@ -383,3 +383,8 @@
 //     #[accessor(Pubkey)]
 //     pub secondary_authority: [u8; 32];
 // }
+
+
+
+fn get_secondary_authority(&self) -> Pubkey
+fn set_secondary_authority(&mut self , value: &Pubkey)
