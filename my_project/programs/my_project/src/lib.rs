@@ -402,3 +402,8 @@
 // #[zero_copy]
 
 // pub struct event {....}
+// #[zero_copy]
+// pub struct Event {
+//     pub from: Pubkey,
+//     pub data: u64,
+// }
