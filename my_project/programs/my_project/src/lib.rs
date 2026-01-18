@@ -51,11 +51,26 @@
 //     MySecondCustomError,
 // }
 
-#[error_code]
+// #[error_code]
 
-pub enum MyError {
-    #[msg("Custom Error message")]
-    MyCustomError,
-    #[msg("My second custom error message")]
-    MySecondCustomError,
-}
+// pub enum MyError {
+//     #[msg("Custom Error message")]
+//     MyCustomError,
+//     #[msg("My second custom error message")]
+//     MySecondCustomError,
+// }
+// use anchor_lang::*;
+
+// #[program]
+
+// pub mod my_program {
+//     use super::*;
+
+//     pub fn do_something(ctx: Context<ctx>, value: u64) -> Result<()> {
+//         if value == 0 {
+//             return err!(MyError::MyCustomError);
+//         }
+
+//         Ok(())
+//     }
+// }
