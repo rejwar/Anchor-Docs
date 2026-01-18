@@ -1,37 +1,49 @@
 use anchor_lang::prelude::*;
-use anchor_lang::system_program::{transfer, Transfer};
 
-declare_id!("falkjdhsflkjahdflkasfq8495435afdsjbfd");
+declare_id!("alkgfjsfhdgfkjahsfd854q23957243");
 
 #[program]
-
-pub mod cpi {
+pub mod example {
     use super::*;
 
-    pub fn sol_transfer(ctx: Context<SolTransfer>, amount: u64) -> Result<()> {
-        let from_pubkey = ctx.accounts.sender.to_account_info();
-        let to_pubkey = ctx.accounts.recipient.to_account_info();
-        let program_id = ctx.accounts.system_program.to_account_info();
+    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
+        let counter = &ctx.accounts.counter;
+        msg!("Counter account created ! Current count {}", counter.count);
+        Ok(())
+    }
 
+    pub fn increment(ctx: Context<Initialize>) -> Result<()> {
+        let counter = &mut ctx.accounts.counter;
+        msg!("Previous counter is {}", counter.count);
 
-        let cpi_context = CpiContext::new(
-            program_id,
-            Transfer {
-                from: from_pubkey,
-                to: to_pubkey,
-            },
-        );
-        transfer(cpi_context , amount)?;
+        counter.count += 1;
+        msg!("Counter incremented current count is {}", counter.count);
         Ok(())
     }
 }
 
-#derive[(Accounts)]
+#[derive(Accounts)]
+pub struct Initialize<'info> {
+    #[account(mut)]
+    pub payer: Signer<'info>,
 
-pub struct SolTransfer<'info>{
+    #[account (
+        init,
+        payer = payer,
+        space = 8 + 8
+    )]
+    pub counter: Account<'info, Counter>,
+    pub system_program: Program<'info, System>,
+}
+
+#[derive(Account)]
+
+pub struct Increment<'info> {
     #[account(mut)]
-    sender: Signer<'info>,
-    #[account(mut)]
-    recipient: SystemAccount<'info>
-    system_program: Program<'info , System>,
+    pub counter: Account<'info, Counter>,
+}
+
+#[account]
+pub struct Counter {
+    pub count: u64,
 }
