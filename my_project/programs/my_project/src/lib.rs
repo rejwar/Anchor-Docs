@@ -196,9 +196,15 @@
 //     pub new_value: u64,
 // }
 
-#[event]
+// #[event]
 
-pub struct ValueUpdated {
-    pub user: Pubkey,
-    pub value: u64,
-}
+// pub struct ValueUpdated {
+//     pub user: Pubkey,
+//     pub value: u64,
+// }
+
+
+emit!(ValueChanged {
+    user: user.key(),
+    value: 10,
+})
