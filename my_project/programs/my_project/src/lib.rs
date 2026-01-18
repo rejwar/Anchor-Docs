@@ -41,3 +41,21 @@
 
 //     Ok(())
 // }
+
+// #[error_code]
+
+// pub enum MyError {
+//     #[msg("My Custom error message ")]
+//     MyCustomError,
+//     #[msg(" My second custom error message")]
+//     MySecondCustomError,
+// }
+
+#[error_code]
+
+pub enum MyError {
+    #[msg("Custom Error message")]
+    MyCustomError,
+    #[msg("My second custom error message")]
+    MySecondCustomError,
+}
