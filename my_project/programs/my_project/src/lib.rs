@@ -97,3 +97,10 @@
 //     ctx.accounts.my_account.set_inner(data);
 //     Ok(())
 // }
+
+// #[error_code]
+
+// pub enum MyError {
+//     #[msg("MyAccount may only hold data below 100")]
+//     DataTooLarge,
+// }
