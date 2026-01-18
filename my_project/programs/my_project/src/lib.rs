@@ -80,11 +80,20 @@
 //     MissingAuthority,
 // }
 
-#[error_code]
-pub enum AuthError {
-    #[msg("Authorized access ")]
-    Unauthorized,
+// #[error_code]
+// pub enum AuthError {
+//     #[msg("Authorized access ")]
+//     Unauthorized,
 
-    #[msg("Sniper is missing ")]
-    MissingSigner,
-}
+//     #[msg("Sniper is missing ")]
+//     MissingSigner,
+// }
+
+// pub fn set_data(ctx: Context<SetData>, data: MyAccount) -> Result<()> {
+//     if data.data == 100 {
+//         return err!(MyError::DataTooLarge);
+//     }
+
+//     ctx.accounts.my_account.set_inner(data);
+//     Ok(())
+// }
