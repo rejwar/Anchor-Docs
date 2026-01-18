@@ -203,8 +203,24 @@
 //     pub value: u64,
 // }
 
+// emit!(ValueChanged {
+//     user: user.key(),
+//     value: 10,
+// })
 
-emit!(ValueChanged {
-    user: user.key(),
-    value: 10,
-})
+use anchor_lang::prelude::*;
+declare_id!("11111111111111111111111111111111111111");
+
+#[program]
+
+pub mod emit_demo {
+    use super::*;
+
+    pub fn update(ctx.Context<Updata> , value: u64) -> Result<()> {
+        emit!(ValueChanged {
+            user: ctx.accounts.user.key(),
+            value,
+        });
+        Ok(())
+    }
+}
