@@ -104,3 +104,10 @@
 //     #[msg("MyAccount may only hold data below 100")]
 //     DataTooLarge,
 // }
+
+// pub fn set_data(ctx: Context<SetData>, data: MyAccount) -> Result<()> {
+//     require!(data.data < 100, MyError::DataTooLarge);
+
+//     ctx.accounts.my_account.set_inner(data);
+//     Ok(())
+// }
