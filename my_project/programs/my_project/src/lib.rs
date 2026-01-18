@@ -79,3 +79,12 @@
 // pub enum MyError {
 //     MissingAuthority,
 // }
+
+#[error_code]
+pub enum AuthError {
+    #[msg("Authorized access ")]
+    Unauthorized,
+
+    #[msg("Sniper is missing ")]
+    MissingSigner,
+}
