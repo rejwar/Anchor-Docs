@@ -126,72 +126,79 @@
 //     new_value,
 // })
 
-use anchor_lang::prelude::*;
-declare_id!("1111111111111111111111111111111");
+// use anchor_lang::prelude::*;
+// declare_id!("1111111111111111111111111111111");
 
-#[program]
+// #[program]
 
-pub mod emit_example {
-    use super::*;
+// pub mod emit_example {
+//     use super::*;
 
-    pub fn initialize(ctx: Context<Initialize> , value: u64) -> Result <()> {
-        ctx.accounts.data_account.value = value;
+//     pub fn initialize(ctx: Context<Initialize> , value: u64) -> Result <()> {
+//         ctx.accounts.data_account.value = value;
 
-        emit!(Initialize {
-            user: ctx.accounts.signer.key(),
-            value,
-        });
+//         emit!(Initialize {
+//             user: ctx.accounts.signer.key(),
+//             value,
+//         });
 
-        Ok(())
-    }
+//         Ok(())
+//     }
 
-    pub fn update(ctx.Context<Updata> , new_value: u64 ) -> Result<()> {
-        let old = ctx.accounts.data_account.value;
-        ctx.accounts.data_account.value = new_value;
+//     pub fn update(ctx.Context<Updata> , new_value: u64 ) -> Result<()> {
+//         let old = ctx.accounts.data_account.value;
+//         ctx.accounts.data_account.value = new_value;
 
-        emit!(ValueUpdated {
-            user: ctx.accounts.signer.key(),
-            old_value: old,
-            new_value,
-        });
+//         emit!(ValueUpdated {
+//             user: ctx.accounts.signer.key(),
+//             old_value: old,
+//             new_value,
+//         });
 
-        Ok(())
-    }
-}
+//         Ok(())
+//     }
+// }
 
-#[derive(Accounts)]
-pub struct Initialize<'info> {
-    #[account(init , payer = signer , space = 8 +8)]
-    pub data_account: Account<'info , DataAccount>,
+// #[derive(Accounts)]
+// pub struct Initialize<'info> {
+//     #[account(init , payer = signer , space = 8 +8)]
+//     pub data_account: Account<'info , DataAccount>,
 
-    #[account(mut)]
-    pub signer: Signer<'info>,
-    pub system_program: Program<'info , System>,
-}
+//     #[account(mut)]
+//     pub signer: Signer<'info>,
+//     pub system_program: Program<'info , System>,
+// }
 
-#[derive(Accounts)]
-pub struct Updata<'info> {
-    #[account(mut)]
-    pub data_account: Account<'info , DataAccount>,
-    pub signer: Signer<'info>,
-}
+// #[derive(Accounts)]
+// pub struct Updata<'info> {
+//     #[account(mut)]
+//     pub data_account: Account<'info , DataAccount>,
+//     pub signer: Signer<'info>,
+// }
 
-#[account]
+// #[account]
 
-pub struct DataAccount {
-    pub value : u64 ,
-}
+// pub struct DataAccount {
+//     pub value : u64 ,
+// }
 
-#[event]
-pub struct Initialize {
-    pub user: Pubkey,
-    pub value: u64,
-}
+// #[event]
+// pub struct Initialize {
+//     pub user: Pubkey,
+//     pub value: u64,
+// }
+
+// #[event]
+
+// pub struct ValueUpdated {
+//     pub user: Pubkey,
+//     pub old_value: u64,
+//     pub new_value: u64,
+// }
 
 #[event]
 
 pub struct ValueUpdated {
     pub user: Pubkey,
-    pub old_value: u64,
-    pub new_value: u64,
+    pub value: u64,
 }
