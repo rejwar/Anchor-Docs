@@ -15,17 +15,20 @@
 
 // pub type Result<T> = std::result::Result<T, error::Error>;
 
+// use other_program::cpi::accounts::Increments;
+// use other_program::cpi::increment;
 
-use other_program::cpi::accounts::Increments;
-use other_program::cpi::increment;
+// let cpi_ctx = CpiContext::new(
+//     ctx.accounts.other_program.to_account_info(),
+//     Increment {
+//         counter: ctx.accounts.counter.to_account_info(),
+//         authority: ctx.accounts.user.to_account_info(),
+//     },
 
-let cpi_ctx = CpiContext::new(
-    ctx.accounts.other_program.to_account_info(),
-    Increment {
-        counter: ctx.accounts.counter.to_account_info(),
-        authority: ctx.accounts.user.to_account_info(),
-    },
+// );
 
-);
+// increment(cpi_ctx)?;
 
-increment(cpi_ctx)?;
+pub fn my_instructions(ctx: Context<MyContext>) -> Result<()> {
+    Ok(())
+}
