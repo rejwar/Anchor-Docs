@@ -27,8 +27,17 @@
 
 // );
 
-// increment(cpi_ctx)?;
+// // increment(cpi_ctx)?;
 
-pub fn my_instructions(ctx: Context<MyContext>) -> Result<()> {
-    Ok(())
-}
+// pub fn my_instructions(ctx: Context<MyContext>) -> Result<()> {
+//     Ok(())
+// }
+
+// pub fn withdraw(ctx: Context<withdraw>, amount: u64) -> Result<()> {
+//     require!(
+//         ctx.accounts.vault.balance >= amount,
+//         MyError::insufficientFunds
+//     );
+
+//     Ok(())
+// }
