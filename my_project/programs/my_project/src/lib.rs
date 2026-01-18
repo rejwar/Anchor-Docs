@@ -224,3 +224,14 @@ pub mod emit_demo {
         Ok(())
     }
 }
+
+#[derive(Accounts)]
+pub struct Updata<'info>{
+    pub user: Signer<'info>,
+}
+
+#[event]
+pub struct ValueChanged {
+    pub user: Pubkey,
+    pub value: u64,
+}
