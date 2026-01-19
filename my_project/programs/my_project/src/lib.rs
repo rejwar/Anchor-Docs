@@ -241,11 +241,16 @@
 //     pub value: [u64; 100],
 // }
 
-use anchor_lang::prelude::*;
+// use anchor_lang::prelude::*;
 
-#[account(zero_copy)]
-#[repr(packed)]
+// #[account(zero_copy)]
+// #[repr(packed)]
 
+// pub struct Counter {
+//     pub value: u64,
+// }
+//zero copy
+#[account]
 pub struct Counter {
     pub value: u64,
 }
