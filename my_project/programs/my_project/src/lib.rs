@@ -324,3 +324,10 @@
 //     account.data = [1; 10232];
 //     Ok(())
 // }
+
+// #[derive(Accounts)]
+
+// pub struct Updata<'info> {
+//     #[account(mut)]
+//     pub data_account: AccountLoader<'info, data>,
+// }
