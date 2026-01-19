@@ -318,3 +318,9 @@
 //     pub payer: Signer<'info>,
 //     pub system_program: Program<'info, System>,
 // }
+
+// pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
+//     let account = &mut ctx.accounts.data_account.load_init()?;
+//     account.data = [1; 10232];
+//     Ok(())
+// }
