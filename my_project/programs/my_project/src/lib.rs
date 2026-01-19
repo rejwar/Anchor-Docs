@@ -283,3 +283,9 @@
 // pub struct Orderbook {
 //     pub orders: [u64; 1024],
 // }
+
+// #[account(zero_copy)]
+
+// pub struct Data {
+//     pub data: [u8; 10232],
+// }
