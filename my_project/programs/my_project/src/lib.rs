@@ -337,3 +337,9 @@
 // let account = &mut ctx.accounts.data_account.load_mut()?;
 
 // account.data = [2; 10232]
+
+// pub fn update(ctx: Context<update>) -> Result<()> {
+//     let account = &mut ctx.accounts.data_account.load_mut()?;
+//     account.data = [2; 10232];
+//     Ok(())
+// }
