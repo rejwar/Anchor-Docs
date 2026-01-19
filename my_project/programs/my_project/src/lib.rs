@@ -276,3 +276,10 @@
 //     counter.value +=1;
 //     Ok(())
 // }
+
+// #[account(zero_copy)]
+// #[repr(packed)]
+
+// pub struct Orderbook {
+//     pub orders: [u64; 1024],
+// }
