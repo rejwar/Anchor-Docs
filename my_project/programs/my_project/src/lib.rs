@@ -351,4 +351,6 @@
 // pub struct ReadOnly<'info> {
 //     pub data_account: AccountLoader<'info, Data>,
 // }
-pub fn ReadOnly(ctx: Context<ReadOnly>) -> Result<()> {}
+// pub fn ReadOnly(ctx: Context<ReadOnly>) -> Result<()> {}
+
+// let account = &ctx.accounts.data_account.load()?;
