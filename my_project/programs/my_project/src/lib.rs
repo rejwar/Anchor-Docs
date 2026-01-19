@@ -354,3 +354,5 @@
 // pub fn ReadOnly(ctx: Context<ReadOnly>) -> Result<()> {}
 
 // let account = &ctx.accounts.data_account.load()?;
+
+// msg!("First 10 bytes {:?}", &account.data[..10]);
