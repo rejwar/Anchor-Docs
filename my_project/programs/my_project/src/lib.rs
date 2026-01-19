@@ -407,3 +407,9 @@
 //     pub from: Pubkey,
 //     pub data: u64,
 // }
+
+// #[derive(AnchorSerialize, AnchorDeserialize)]
+// pub struct EventParams {
+//     pub from: Pubkey,
+//     pub data: u64,
+// }
