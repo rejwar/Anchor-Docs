@@ -343,3 +343,11 @@
 //     account.data = [2; 10232];
 //     Ok(())
 // }
+
+// AccountLoader<'info , Data>
+
+// #[derive(Accounts)]
+
+// pub struct ReadOnly<'info> {
+//     pub data_account: AccountLoader<'info, Data>,
+// }
