@@ -356,3 +356,13 @@
 // let account = &ctx.accounts.data_account.load()?;
 
 // msg!("First 10 bytes {:?}", &account.data[..10]);
+
+// pub  fn ReadOnly(ctx.Context<ReadOnly>) ->
+
+// #[zero_copy]
+
+// pub struct Order {
+//     pub trader: Pubkey,
+//     pub price: u64,
+//     pub quality: u64,
+// }
