@@ -331,3 +331,5 @@
 //     #[account(mut)]
 //     pub data_account: AccountLoader<'info, data>,
 // }
+
+// pub fn update(ctx: Context<update>) -> Result<()> {}
