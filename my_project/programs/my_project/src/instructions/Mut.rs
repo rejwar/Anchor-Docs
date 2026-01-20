@@ -106,3 +106,11 @@
 //     pub valut: Account<'info, Vault>,
 //     pub target: AccountInfo<'info>,
 // }
+
+// #[derive(Accounts)]
+// pub struct Example<'info> {
+//     #[account(address = authority.key())]
+//     pub signer_account: AccountInfo<'info>,
+
+//     pub authority: Signer<'info>,
+// }
