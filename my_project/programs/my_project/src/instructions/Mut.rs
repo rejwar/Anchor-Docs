@@ -84,3 +84,8 @@
 //     b"user"
 //     authority.key().as_ref()
 // ]
+
+// seeds = [
+//     b"user",
+//     authority.key().as_ref()
+// ]
