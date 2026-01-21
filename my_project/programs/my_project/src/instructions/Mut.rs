@@ -155,3 +155,9 @@
 // )]
 
 // pub mint:Account<'info , Mint>
+
+// #[derive(
+//     token::program = token_program
+// )]
+
+// pub mint: Account<'info , Mint>
