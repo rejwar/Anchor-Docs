@@ -140,3 +140,12 @@
 
 // pub user_token:Account<'info , TokenAccount>;
 // pub token_program: Program<'info , Token>;
+
+// #[account(
+//     mut,
+//     token::mint = mint,
+//     token::authority = user,
+//     token::program = token_program
+// )]
+
+// pub user_token:Account<'info , TokenAccount>
