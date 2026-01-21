@@ -125,3 +125,11 @@
 
 // pub user_token: Account<'info , TokenAccount>;
 // pub mint: Account<'info, Mint>;
+
+// #[account(
+//     mut,
+//     token::authority = user
+// )]
+
+// pub user_token: Account <'info, TokenAccount>;
+// pub user: Signer<'info>
