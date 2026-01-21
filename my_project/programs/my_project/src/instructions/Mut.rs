@@ -114,3 +114,14 @@
 
 //     pub authority: Signer<'info>,
 // }
+
+// #[account(address = system_program::ID)]
+// pub system_programa: Program<'info , System>,
+
+// #[account(
+//     mut,
+//     token::mint = mint
+// )]
+
+// pub user_token: Account<'info , TokenAccount>;
+// pub mint: Account<'info, Mint>;
