@@ -211,3 +211,33 @@
 // )]
 
 // pub user_token: Account<'info , TokenAccount>;
+
+// #[derive(Accounts)]
+// pub struct InitAta<'info> {
+//     pub user: Signer<'inf
+// }
+
+// #[account(
+//     init_if_needed,
+//     payer = user,
+//     associated_token::mint = mint,
+//     associated_token::authority = user,
+//     associated_token::authority = user,
+//     *::token_program = token_program
+// )]
+
+// pub user_ata: Account<'info, TokenAccount>,
+
+// pub mint: Account<'info , TokenAccount>,
+// pub token_program: Program<'info, Toek
+
+#[derive(Accounts)]
+pub struct MintExtensionToken<'info> {
+    #[account(
+        mut,
+        extensions::token_program = token_2022_program,
+
+    )]
+    pub mint: InterfaceAccount<'info, Mint>,
+    pub token_2022_program: Program<'info, Token2022>,
+}
