@@ -17,3 +17,8 @@
 //     pub balance: u64,      // 8
 //     pub active: bool,      //1
 // }
+
+// space = 8 + 32 + 8 + 1
+
+
+space = 8 + std::mem::size_of::<Data>()
