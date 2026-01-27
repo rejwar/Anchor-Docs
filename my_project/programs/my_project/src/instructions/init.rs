@@ -23,3 +23,7 @@
 // space = 8 + std::mem::size_of::<Data>()
 
 // pub items: Vec<u64>
+
+impl MyAccount {
+    pub const LEN: usize = 8 + 32 + 8;
+}
