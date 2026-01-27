@@ -27,3 +27,8 @@
 // impl MyAccount {
 //     pub const LEN: usize = 8 + 32 + 8;
 // }
+
+// #[account]
+// pub struct Data {
+//     pub value: u64,
+// }
