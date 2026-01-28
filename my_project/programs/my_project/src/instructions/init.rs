@@ -32,3 +32,6 @@
 // pub struct Data {
 //     pub value: u64,
 // }
+
+// #[account(init , payer = payer , space = 8 + ExampleAccount::INIT_SPACE)]
+// pub data: Account<'info , ExampleAccount>,
