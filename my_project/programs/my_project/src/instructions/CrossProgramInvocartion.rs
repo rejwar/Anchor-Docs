@@ -41,3 +41,11 @@
 // )]
 
 // pub mint_account: Account<'info , Mint>,
+
+// #[account(
+//     token::mint = mint_account,
+//     token::authority  = user,
+//     token::token_program = token_2022_program
+// )]
+
+// pub user_token_account: Account<'info , TokenAccount>,
