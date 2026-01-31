@@ -70,3 +70,17 @@
 // )]
 
 // pub mint_account:Account<'info, Mint>,
+
+
+
+#[account(
+    init,
+    payer = user ,
+    mint::decimals = 9,
+    mint::authority = user,
+
+    extensions::transfer_hook::authority = user,
+    extensions::transfer_hook::program_id = hook_program
+)]
+
+pub mint_account: Account<'info , Mint>
